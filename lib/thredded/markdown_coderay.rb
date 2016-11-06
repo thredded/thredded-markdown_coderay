@@ -8,7 +8,7 @@ module Thredded
       attr_accessor :options
 
       def setup!
-        assert_pipeline_contains! Thredded::HtmlPipeline::KramdownFilter
+        assert_pipeline_contains! 'Thredded::HtmlPipeline::KramdownFilter'
         Thredded::HtmlPipeline::KramdownFilter.options.update(options)
         %w(div span code table td ol).each do |tag|
           whitelist_attribute! tag, 'class'
@@ -17,14 +17,14 @@ module Thredded
 
       private
 
-      def assert_pipeline_contains!(filter)
-        return if pipeline_contains?(filter)
-        raise "#{self.class.name} requires #{filter.name} in" \
+      def assert_pipeline_contains!(name)
+        return if pipeline_contains?(name)
+        raise "#{self.class.name} requires #{name} in" \
               'Thredded::ContentFormatter.pipeline_filters'
       end
 
-      def pipeline_contains?(filter)
-        Thredded::ContentFormatter.pipeline_filters.include?(filter)
+      def pipeline_contains?(name)
+        Thredded::ContentFormatter.pipeline_filters.map(&:name).include?(name)
       end
 
       def whitelist_attribute!(tag, attribute)
