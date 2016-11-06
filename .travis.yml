@@ -1,5 +1,14 @@
-sudo: false
+dist: trusty
+sudo: required
 language: ruby
 rvm:
-  - 2.3.1
-before_install: gem install bundler -v 1.13.6
+# The latest ruby that is pre-installed on Travis Trusty
+- 2.3.1
+env:
+  global:
+  - TRAVIS=1 CI=1 COVERAGE=1
+cache: bundler
+bundler_args: --path ../../vendor/bundle --without debug
+
+# Avoid rake here, as the RSpec test task spawns a new process which does not run via bundler.
+script: "bundle exec rspec --format d && bundle exec rubocop && bundle exec codeclimate-test-reporter"
