@@ -1,4 +1,4 @@
-# Thredded::MarkdownCoderay
+# Thredded Plugin: Syntax Highlighting in Markdown via Coderay [![Build Status](https://travis-ci.org/thredded/thredded-markdown_coderay.svg?branch=master)](https://travis-ci.org/thredded/thredded-markdown_coderay) [![Test Coverage](https://codeclimate.com/github/thredded/thredded-markdown_coderay/badges/coverage.svg)](https://codeclimate.com/github/thredded/thredded-markdown_coderay/coverage)
 
 A Thredded plugin that Highlights code syntax in your Markdown posts via
 [Coderay](https://github.com/rubychan/coderay).

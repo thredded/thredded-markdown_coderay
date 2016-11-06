@@ -8,7 +8,7 @@ env:
   global:
   - TRAVIS=1 CI=1 COVERAGE=1
 cache: bundler
-bundler_args: --path ../../vendor/bundle --without debug
+bundler_args: --without debug
 
 # Avoid rake here, as the RSpec test task spawns a new process which does not run via bundler.
 script: "bundle exec rspec --format d && bundle exec rubocop && bundle exec codeclimate-test-reporter"
