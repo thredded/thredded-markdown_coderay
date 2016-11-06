@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
 
   s.summary       = 'Thredded Markdown code blocks highlighting via Coderay.'
   s.description   = 'Highlights code syntax in your Markdown posts via Coderay.'
-  s.homepage      = 'https://github.com/thredded/thredded_create_app'
+  s.homepage      = 'https://github.com/thredded/thredded-markdown_coderay'
   s.license       = 'MIT'
 
   s.required_ruby_version = '~> 2.3'
