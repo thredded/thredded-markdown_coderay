@@ -20,7 +20,7 @@ describe Thredded::MarkdownCoderay do
        </div>
        </div>
     HTML
-    expect(Thredded::ContentFormatter.new(nil).format_content(markdown)).
-        to(eq expected_html)
+    expect(Thredded::ContentFormatter.new(nil).format_content(markdown))
+      .to(eq expected_html)
   end
 end
