@@ -9,8 +9,8 @@ Gem::Specification.new do |s|
   s.authors       = ['Gleb Mazovetskiy']
   s.email         = ['glex.spb@gmail.com']
 
-  s.summary       = 'Thredded Kramdown code blocks highlighting via Coderay.'
-  s.description   = 'Highlights code syntax in your Kramdown posts via Coderay.'
+  s.summary       = 'Thredded Markdown code blocks highlighting via Coderay.'
+  s.description   = 'Highlights code syntax in your Markdown posts via Coderay.'
   s.homepage      = 'https://github.com/thredded/thredded_create_app'
   s.license       = 'MIT'
 
