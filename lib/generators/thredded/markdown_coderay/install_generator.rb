@@ -10,25 +10,26 @@ module Thredded
       public_task :install
 
       def install
-        copy_file '_thredded-coderay.scss',
-                  'app/assets/stylesheets/_thredded-coderay.scss'
-        append_to_file 'app/assets/stylesheets/application.scss', <<~'SCSS'
-          @import "thredded-coderay";
-        SCSS
+        copy_file '_layout.scss',
+                  'app/assets/stylesheets/coderay/_layout.scss'
+        copy_file '_day.scss',
+                  'app/assets/stylesheets/coderay/_day.scss'
+        copy_file '_night.scss',
+                  'app/assets/stylesheets/coderay/_night.scss'
+        add_import_if_file_exists 'application.scss', 'coderay/day'
+        add_import_if_file_exists 'day.scss', 'coderay/day'
+        add_import_if_file_exists 'night.scss', 'coderay/night'
+        add_import_if_file_exists 'email.scss', 'coderay/day'
       end
 
       private
 
-      def coderay_css
-        require 'coderay'
-        CodeRay::Encoders[:html]::CSS.new(:default).stylesheet
-      end
-
-      def indent(multiplier, content)
-        spaces = ' ' * multiplier
-        content.each_line.map do |line|
-          line.blank? ? line : "#{spaces}#{line}"
-        end.join
+      def add_import_if_file_exists(file, import)
+        path = File.join('app', 'assets', 'stylesheets', file)
+        return unless File.exist?(path)
+        append_to_file path, <<~SCSS
+            @import "#{import}";
+        SCSS
       end
     end
   end
