@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 require 'spec_helper'
 
 describe Thredded::MarkdownCoderay do
@@ -13,12 +14,12 @@ describe Thredded::MarkdownCoderay do
       ```
     MARKDOWN
     expected_html = <<~'HTML'.rstrip
-       <div class="language-ruby highlighter-coderay">
-       <div class="CodeRay">
-         <div class="code"><pre><span class="line-numbers">1</span>puts <span class="integer">1</span>
-       </pre></div>
-       </div>
-       </div>
+      <div class="language-ruby highlighter-coderay">
+      <div class="CodeRay">
+        <div class="code"><pre><span class="line-numbers">1</span>puts <span class="integer">1</span>
+      </pre></div>
+      </div>
+      </div>
     HTML
     expect(Thredded::ContentFormatter.new(nil).format_content(markdown))
       .to(eq expected_html)

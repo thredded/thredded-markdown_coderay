@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 module Thredded
   module MarkdownCoderay
     class InstallGenerator < Rails::Generators::Base
@@ -28,7 +29,7 @@ module Thredded
         path = File.join('app', 'assets', 'stylesheets', file)
         return unless File.exist?(path)
         append_to_file path, <<~SCSS
-            @import "#{import}";
+          @import "#{import}";
         SCSS
       end
     end

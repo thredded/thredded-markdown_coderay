@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 require 'thredded/markdown_coderay/version'
 require 'thredded/markdown_coderay/railtie' if defined?(Rails)
 
