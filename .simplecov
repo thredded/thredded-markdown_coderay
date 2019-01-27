@@ -1,6 +1,7 @@
 # frozen_string_literal: true
-SimpleCov.start do
-  add_filter '/spec/'
-  add_group 'Lib', 'lib/'
-  formatter SimpleCov::Formatter::HTMLFormatter unless ENV['TRAVIS']
+unless defined?(RUBY_ENGINE) && %w(rbx jruby).include?(RUBY_ENGINE)
+  SimpleCov.start do
+    add_filter '/spec/'
+    formatter SimpleCov::Formatter::HTMLFormatter unless ENV['TRAVIS']
+  end
 end
