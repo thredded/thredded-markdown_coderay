@@ -26,7 +26,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'kramdown-syntax-coderay'
 
   s.add_development_dependency 'rspec', '~> 3.5'
-  s.add_development_dependency 'rubocop', '~> 0.45'
+  s.add_development_dependency 'rubocop', '~> 0.63'
   s.add_development_dependency 'simplecov'
   s.add_development_dependency 'thredded', '>= 0.8.0'
 end
