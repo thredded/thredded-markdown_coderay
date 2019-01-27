@@ -28,6 +28,7 @@ module Thredded
       def add_import_if_file_exists(file, import)
         path = File.join('app', 'assets', 'stylesheets', file)
         return unless File.exist?(path)
+
         append_to_file path, <<~SCSS
           @import "#{import}";
         SCSS
