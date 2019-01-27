@@ -2,6 +2,8 @@
 
 require 'thredded/markdown_coderay/version'
 require 'thredded/markdown_coderay/railtie' if defined?(Rails)
+require 'kramdown'
+require 'kramdown-syntax-coderay'
 
 module Thredded
   module MarkdownCoderay

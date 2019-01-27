@@ -23,6 +23,8 @@ Gem::Specification.new do |s|
   s.require_paths = ['lib']
 
   s.add_dependency 'coderay'
+  s.add_dependency 'kramdown-syntax-coderay'
+
   s.add_development_dependency 'rubocop', '~> 0.45'
   s.add_development_dependency 'rspec', '~> 3.5'
   s.add_development_dependency 'simplecov'
