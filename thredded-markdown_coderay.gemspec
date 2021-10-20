@@ -12,7 +12,7 @@ Gem::Specification.new do |s|
 
   s.summary       = 'Thredded Markdown code blocks highlighting via Coderay.'
   s.description   = 'A Thredded plugin that highlights code syntax in your' \
-    ' Markdown posts via Coderay.'
+                    ' Markdown posts via Coderay.'
   s.homepage      = 'https://github.com/thredded/thredded-markdown_coderay'
   s.license       = 'MIT'
 
