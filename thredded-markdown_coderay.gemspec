@@ -16,7 +16,7 @@ Gem::Specification.new do |s|
   s.homepage      = 'https://github.com/thredded/thredded-markdown_coderay'
   s.license       = 'MIT'
 
-  s.required_ruby_version = '~> 2.3'
+  s.required_ruby_version = '>= 2.5'
 
   s.files = Dir['{lib}/**/*'] + %w[LICENSE.txt README.md]
 
@@ -26,7 +26,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'kramdown-syntax-coderay'
 
   s.add_development_dependency 'rspec', '~> 3.5'
-  s.add_development_dependency 'rubocop', '~> 0.63'
+  s.add_development_dependency 'rubocop', '~> 1.22.1'
   s.add_development_dependency 'simplecov'
   s.add_development_dependency 'thredded', '>= 0.8.0'
 end
