@@ -1,9 +1,11 @@
+inherit_from: .rubocop_todo.yml
+
 AllCops:
-  TargetRubyVersion: 2.3
+  TargetRubyVersion: 2.5
   Exclude:
     - 'tmp/**/*'
     - 'vendor/bundle/**/*'
-
+  NewCops: enable
 Style/FrozenStringLiteralComment:
   Exclude:
     - 'lib/thredded_create_app/tasks/*/*.rb'
