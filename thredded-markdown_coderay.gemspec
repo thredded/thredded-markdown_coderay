@@ -12,7 +12,7 @@ Gem::Specification.new do |s|
 
   s.summary       = 'Thredded Markdown code blocks highlighting via Coderay.'
   s.description   = 'A Thredded plugin that highlights code syntax in your' \
-    ' Markdown posts via Coderay.'
+                    ' Markdown posts via Coderay.'
   s.homepage      = 'https://github.com/thredded/thredded-markdown_coderay'
   s.license       = 'MIT'
 
@@ -27,6 +27,7 @@ Gem::Specification.new do |s|
 
   s.add_development_dependency 'rspec', '~> 3.5'
   s.add_development_dependency 'rubocop', '~> 1.22.1'
+  s.add_development_dependency 'rubocop-rspec', '~> 2.5.0'
   s.add_development_dependency 'simplecov'
   s.add_development_dependency 'thredded', '>= 0.8.0'
 end
