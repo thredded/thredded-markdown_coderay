@@ -32,7 +32,7 @@ module Thredded
       end
 
       def whitelist_attribute!(tag, attribute)
-        whitelist_attr = Thredded::ContentFormatter.whitelist[:attributes]
+        whitelist_attr = Thredded::ContentFormatter.allowlist[:attributes]
         whitelist_attr[tag] ||= []
         return if whitelist_attr[tag].include?(attribute)
 

@@ -29,5 +29,5 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'rubocop', '~> 1.22.1'
   s.add_development_dependency 'rubocop-rspec', '~> 2.5.0'
   s.add_development_dependency 'simplecov'
-  s.add_development_dependency 'thredded', '>= 0.8.0'
+  s.add_development_dependency 'thredded', '>= 1.0.1'
 end
