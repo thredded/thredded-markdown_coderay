@@ -14,7 +14,7 @@ module Thredded
         assert_pipeline_contains! 'Thredded::HtmlPipeline::KramdownFilter'
         Thredded::HtmlPipeline::KramdownFilter.options.update(options)
         %w[div span code table td ol].each do |tag|
-          whitelist_attribute! tag, 'class'
+          allowlist_attribute! tag, 'class'
         end
       end
 
@@ -31,12 +31,12 @@ module Thredded
         Thredded::ContentFormatter.pipeline_filters.map(&:name).include?(name)
       end
 
-      def whitelist_attribute!(tag, attribute)
-        whitelist_attr = Thredded::ContentFormatter.allowlist[:attributes]
-        whitelist_attr[tag] ||= []
-        return if whitelist_attr[tag].include?(attribute)
+      def allowlist_attribute!(tag, attribute)
+        allowlist_attr = Thredded::ContentFormatter.allowlist[:attributes]
+        allowlist_attr[tag] ||= []
+        return if allowlist_attr[tag].include?(attribute)
 
-        whitelist_attr[tag] << attribute
+        allowlist_attr[tag] << attribute
       end
     end
 
